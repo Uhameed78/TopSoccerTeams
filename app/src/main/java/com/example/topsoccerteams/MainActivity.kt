@@ -7,6 +7,12 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import android.widget.TextView
 import java.util.Arrays
+import android.util.Log
+//
+fun logArrayValues(arr: Array<String>) {
+    Log.v("ArrayValues", Arrays.toString(arr))
+}
+
 class MainActivity : AppCompatActivity() {
     //
     //
@@ -17,13 +23,21 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
+
+        //
+        logArrayValues(teams)
+
         //
         val teamstxtView = findViewById<TextView>(R.id.teamstxtView)
         //
-        teamstxtView.text = teams[0]
-        teams[0] = "Bayern Munich"
+        var teamsDisplay = ""
+        for (team in teams) {
+            teamsDisplay += "${team}\n"
+        }
+
         //
-        teamstxtView.text = Arrays.toString(teams)
+        teamstxtView.text = teamsDisplay
+
 
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
