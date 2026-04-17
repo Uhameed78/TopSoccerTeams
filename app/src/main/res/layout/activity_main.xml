@@ -18,25 +18,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.07" />
+        app:layout_constraintVertical_bias="0.07"
+        tools:ignore="HardcodedText" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/title"
         android:layout_width="406dp"
         android:layout_height="280dp"
+        tools:ignore="MissingConstraints,TextSizeCheck"
         tools:layout_editor_absoluteX="2dp"
         tools:layout_editor_absoluteY="0dp">
 
         <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TextView"
-            android:textColor="#FFFFFF"
-            tools:layout_editor_absoluteX="176dp"
-            tools:layout_editor_absoluteY="103dp" />
-
-        <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/teamstxtView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="177dp"
@@ -45,7 +39,18 @@
             android:textColor="#FFFFFF"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="HardcodedText,MissingConstraints"
             tools:layout_editor_absoluteY="223dp" />
+
+        <TextView
+            android:id="@+id/linktxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="https://footballdatabase.com/ranking/world/1"
+            android:textColor="#FFFFFF"
+            tools:ignore="HardcodedText,MissingConstraints"
+            tools:layout_editor_absoluteX="47dp"
+            tools:layout_editor_absoluteY="104dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
