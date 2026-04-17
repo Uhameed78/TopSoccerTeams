@@ -9,11 +9,13 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-smallcaps"
         android:text="Top Soccer Teams"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="#FFFFFF"
+        android:textColor="#E91E63"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,32 +27,31 @@
         android:id="@+id/title"
         android:layout_width="406dp"
         android:layout_height="280dp"
-        tools:ignore="MissingConstraints,TextSizeCheck"
-        tools:layout_editor_absoluteX="2dp"
-        tools:layout_editor_absoluteY="0dp">
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="361dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="MissingConstraints,TextSizeCheck">
 
         <TextView
             android:id="@+id/teamstxtView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="249dp"
+            android:layout_height="274dp"
             android:layout_marginStart="177dp"
             android:layout_marginEnd="171dp"
-            android:text="TextView"
-            android:textColor="#FFFFFF"
+            android:layout_marginBottom="4dp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:textColor="#9C27B0"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.574"
             app:layout_constraintStart_toStartOf="parent"
-            tools:ignore="HardcodedText,MissingConstraints"
-            tools:layout_editor_absoluteY="223dp" />
+            tools:ignore="HardcodedText,MissingConstraints" />
 
-        <TextView
-            android:id="@+id/linktxt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="https://footballdatabase.com/ranking/world/1"
-            android:textColor="#FFFFFF"
-            tools:ignore="HardcodedText,MissingConstraints"
-            tools:layout_editor_absoluteX="47dp"
-            tools:layout_editor_absoluteY="104dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

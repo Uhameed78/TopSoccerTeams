@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">TopSoccerTeams</string>
+    <string name="shortest_name_label">Shortest Name: %1$s</string>
 </resources>
