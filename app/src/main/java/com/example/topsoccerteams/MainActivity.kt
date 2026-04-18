@@ -8,26 +8,31 @@ import androidx.core.view.WindowInsetsCompat
 import android.widget.TextView
 import android.util.Log
 //
-fun logArrayValues(arr: Array<String>) {
-    Log.v("ArrayValues", arr.contentToString())
-}
+
 //
-fun getShortestString(arr: Array<String>): String {
-    if (arr.isEmpty()) return ""
-    var shortestElement = arr[0]
+
+
+fun logArrayValues(arr: Array<String>) {
     for (element in arr) {
-        if (element.length < shortestElement.length) {
-            shortestElement = element
-        }
+        Log.d("teams", element)
     }
-    return shortestElement
 }
 
 class MainActivity : AppCompatActivity() {
     //
     //
-    val teams = arrayOf("Bayern Munchen", "Arsenal", "Paris Saint-Germain", "Barcelona", "Real Madrid", "Inter Milan", "Manchester City", "Borussia Dortmund", "Liverpool FC", "Sporting")
+    val teams = arrayOf("Bayern Munchen", "Arsenal", "Paris Saint-Germain", "Barcelona", "Real Madrid", "Inter Milan", "Manchester City", "Borussia Dortmund", "Liverpool FC")
 
+    fun getShortestString(arr: Array<String>): String {
+        if (arr.isEmpty()) return ""
+        var shortestElement = arr[0]
+        for (element in arr) {
+            if (element.length < shortestElement.length) {
+                shortestElement = element
+            }
+        }
+        return shortestElement
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,10 +53,6 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+
         }
     }
-}
