@@ -7,9 +7,9 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import android.widget.TextView
 import android.util.Log
-//
 
-//
+
+//function was added
 
 
 fun logArrayValues(arr: Array<String>) {
@@ -19,8 +19,8 @@ fun logArrayValues(arr: Array<String>) {
 }
 
 class MainActivity : AppCompatActivity() {
-    //
-    //
+
+    // top soccer club teams ranked worldwide
     val teams = arrayOf("Bayern Munchen", "Arsenal", "Paris Saint-Germain", "Barcelona", "Real Madrid", "Inter Milan", "Manchester City", "Borussia Dortmund", "Liverpool FC")
 
     fun getShortestString(arr: Array<String>): String {
@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
-        //
+        // log the array values
         logArrayValues(teams)
 
         val shortestName = getShortestString(teams)
